@@ -1,0 +1,67 @@
+@import "../../styles/variables";
+
+.white-text {
+  color: $white;
+  text-decoration: none;
+}
+
+.column {
+  cursor: pointer;
+  position: relative;
+  background-color: $black;
+  transition: background-color $transition-speed, transform $transition-speed;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    background-color: $white;
+    transform: rotateY(5deg) translateY(-5px);
+
+    .white-text {
+      color: $black;
+    }
+  }
+
+  .icon {
+    left: 50%;
+    transform: translateX(-50%);
+    color: $white;
+  }
+
+  &:hover .icon {
+    margin: 1rem;
+    animation: spin 1s infinite;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.info-box {
+  position: absolute;
+  text-align: center;
+  bottom: -50px;
+  left: 0;
+  width: 100%;
+  color: $black;
+  padding: 10px;
+  opacity: 0;
+  transition: all $transition-speed;
+
+  .column:hover & {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 767px) {
+  .column {
+    flex-direction: row;
+    border-bottom: 1px solid $white;
+  }
+}

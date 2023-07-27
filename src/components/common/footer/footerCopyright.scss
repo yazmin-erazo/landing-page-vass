@@ -1,0 +1,43 @@
+@import "../../../styles/variables";
+
+.custom-font {
+    font-size: 14px;
+}
+
+.copyright {
+    font-size: 12px;
+}
+
+.social-icons i {
+    transition: transform $transition-speed ease;
+}
+
+.social-icons a:hover i {
+    transition: transform $transition-speed ease-in-out;
+    transform: scale($icon-scale);
+    color: bisque;
+}
+
+.menu-footer a {
+    position: relative;
+    transition: transform $transition-speed ease;
+    text-decoration: none;
+
+    // uderline
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: $line-color;
+        visibility: hidden;
+        transition: visibility 0s, width $transition-speed ease;
+    }
+
+    &:hover::after {
+        visibility: visible;
+        width: 100%;
+    }
+}

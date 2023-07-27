@@ -1,0 +1,104 @@
+@import "../../../styles/variables";
+@import "bootstrap/scss/bootstrap";
+
+    .parallax-container {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+        background-color: $white;
+        z-index: 1;
+    
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-corner {
+        background-color: transparent;
+    }
+    }
+    
+    .animation,
+    .animation_layer {
+        height: 100vh;
+    }
+    
+    .animation {
+        display: block;
+        position: relative;
+        background-color: $white;
+    }
+    
+    .animation_layer {
+        background-repeat: no-repeat;
+        width: 100%;
+        position: absolute;
+        background-size: 500px auto;
+    }
+    
+    .animation_layer.parallax {
+        position: fixed;
+    }
+    
+    .word-xl {
+        font-size: 13rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .word-md {
+        font-size: 12rem;
+        position: absolute;
+        left: 60%;
+    }
+    
+    #a {
+        background-image: url("https://images.pexels.com/photos/17159211/pexels-photo-17159211/free-photo-of-mar-hombre-playa-camara.jpeg");
+        background-position: left center;
+        margin: 20px;
+    }
+    
+    #b {
+        background-image: url("https://clipart-library.com/images/rTjd6qeTR.gif");
+        background-position: center center;
+        margin: 20px;
+    }
+    
+    #c {
+        background-image: url("https://images.pexels.com/photos/17290037/pexels-photo-17290037/free-photo-of-mujer-camara-verano-pasos.jpeg");
+        background-position: right center;
+        margin: 20px;
+    }
+
+    
+@media (max-width: 767px) {
+    .parallax-container {
+        width: 100vw;
+        height: 50vh;
+    }
+    
+    .animation_layer {
+        background-size: 300px auto;
+    }
+
+    .word-xl {
+      font-size: 4.2rem;
+    }
+    
+    #a, #c, .word-md {
+        display: none;
+        font-size: 0;
+    }
+
+}

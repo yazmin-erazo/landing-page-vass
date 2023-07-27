@@ -1,0 +1,102 @@
+@import "../../../styles/variables";
+
+.header {
+  background-color: $black; 
+  color: $white;                 
+
+  a {
+    color: $white;               
+    text-decoration: none;                   
+    &:hover,
+    &:focus {
+      color: $white;             
+      text-decoration: none;                 
+    }
+  }
+
+  .form-control {
+    background-color: $white;    
+    color: $black;         
+  }
+
+  .btn-outline-success {
+    color: $white;               
+    border-color: $white;        
+    &:hover,
+    &:focus {
+      color: $white;
+      border-color: $white;     
+    }
+  }
+}
+
+.navbar-toggler {
+  border: none; 
+  outline: none; 
+}
+
+.dropdown {
+  position: static;
+}
+
+.dropdown-menu.show {
+  position: fixed;
+  width: 100vw;
+  background-color: $black;
+  color: $white;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  min-height: 100px;
+  height: 100%;
+  top: 76px;
+  border-top: 1px solid $white;
+  border-radius: 0;
+}
+
+.dropdown-item {
+  color: $white;
+  text-align: center;
+  height: 100%;
+  border-right: 1px solid $white;
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.dropdown-item:last-child {
+  border-right: none;
+}
+
+.dropdown-item:hover {
+  background-color: $black;
+  color: $white;
+}
+
+.dropdown-item.active{
+  background-color: $black;
+}
+
+@media (max-width: 767px) {
+  .navbar-nav {
+    flex-direction: column; 
+  }
+  .navbar-search-desktop {
+    display: none; 
+  }
+
+  .dropdown-menu.show {
+    position: static;
+    width: 100%;
+    background-color: $black;
+    color: $white;
+    z-index: 1000;
+    display: block;
+    top: 0;
+    border-top: none;
+  }
+
+  .dropdown-item {
+    border-right: none;
+  }
+}

@@ -1,0 +1,34 @@
+@import '../../styles/variables';
+
+.hero-banner {
+    background-image: none;
+    height: 550px;
+    position: relative;
+    font-family: $font-banner;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-banner h1 {
+    font-size: 5rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 767px) {
+    .hero-banner {
+        height: 400px;
+    }
+    .hero-video {
+        height: 400px;
+    }
+}

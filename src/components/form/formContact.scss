@@ -1,0 +1,80 @@
+@import "../../styles/variables";
+
+form {
+	font-family: $font-banner;
+	padding: 3em 0 7em;
+	background-color: $black;
+}
+
+input {
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid $white;
+	padding: 5em 0 0 0;
+	color: $white;
+}
+
+input::placeholder {
+	color: rgb(194, 194, 194);
+}
+
+input:focus {
+	border: none;
+}
+
+label {
+	margin-top: 5em;
+}
+
+textarea {
+	color: $white;
+}
+
+textarea:focus,
+input:focus {
+	border-bottom: 1px solid $white;
+	border-color: $white;
+	outline: 0 none;
+}
+
+button[type="submit"] {
+	width: 125px;
+	height: 125px;
+	border-radius: 100%;
+	border: 1px solid $white;
+	background-color: transparent;
+	color: $white;
+}
+
+.form-group {
+	position: relative;
+	margin-bottom: 20px;
+
+	label {
+		position: absolute;
+		left: 10px;
+		top: 10px;
+		transition: all $transition-speed ease-out;
+		pointer-events: none;
+		color: #999;
+	}
+
+	input,
+	textarea {
+		padding: 10px;
+		width: 100%;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+	}
+
+	&.focused {
+		label {
+		top: -20px;
+		font-size: 14px;
+		}
+	}
+
+	span.text-danger {
+		color: red;
+	}
+}
