@@ -42,7 +42,8 @@
         background-repeat: no-repeat;
         width: 100%;
         position: absolute;
-        background-size: 500px auto;
+        background-size: 40% auto;
+        
     }
     
     .animation_layer.parallax {
@@ -60,11 +61,12 @@
     .word-md {
         font-size: 12rem;
         position: absolute;
-        left: 60%;
+        left: 25%;
     }
     
+    
     #a {
-        background-image: url("https://images.pexels.com/photos/17159211/pexels-photo-17159211/free-photo-of-mar-hombre-playa-camara.jpeg");
+        background-image: url("https://pepeganga.vtexassets.com/arquivos/ids/782400/125455448-1.png?v=637911002320670000");
         background-position: left center;
         margin: 20px;
     }
@@ -73,10 +75,12 @@
         background-image: url("https://clipart-library.com/images/rTjd6qeTR.gif");
         background-position: center center;
         margin: 20px;
+        width:500px;
+        left: 30%;
     }
     
     #c {
-        background-image: url("https://images.pexels.com/photos/17290037/pexels-photo-17290037/free-photo-of-mujer-camara-verano-pasos.jpeg");
+        background-image: url("https://acis.org.co/portal/sites/default/files/tcl_17.png");
         background-position: right center;
         margin: 20px;
     }
@@ -85,11 +89,10 @@
 @media (max-width: 767px) {
     .parallax-container {
         width: 100vw;
-        height: 50vh;
     }
     
     .animation_layer {
-        background-size: 300px auto;
+        background-size: 300px 300px;
     }
 
     .word-xl {

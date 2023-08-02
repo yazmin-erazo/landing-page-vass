@@ -4,9 +4,7 @@ import { BrowserRouter, useRoutes } from "react-router-dom";
 import Home from "./pages/home/home";
 import Contact from "./pages/contact/Contact";
 import NotFound from "./pages/notFound/NotFound";
-import Header from "./components/common/header/Header";
-import FooterMenu from "./components/common/footer/FooterMenu";
-import FooterCopyright from "./components/common/footer/FooterCopyright";
+import MainLayout from './layouts/MainLayout'
 
 const AppRoutes = () => {
   let routes = useRoutes([
@@ -21,10 +19,9 @@ const AppRoutes = () => {
 const App = () => {
   return (
     <BrowserRouter>
-      <Header />
-      <AppRoutes />
-      <FooterMenu />
-      <FooterCopyright />
+      <MainLayout>
+        <AppRoutes />
+      </MainLayout>
     </BrowserRouter>
   );
 };

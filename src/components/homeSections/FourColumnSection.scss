@@ -59,9 +59,45 @@
   }
 }
 
+.video-column {
+  position: relative;
+  overflow: hidden;
+}
+
+.video-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.video-player video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.curtain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: height 0.5s ease;
+}
+
+.bi-asterisk{
+  font-size: 32px;
+  color: $white;
+}
+
 @media (max-width: 767px) {
   .column {
     flex-direction: row;
     border-bottom: 1px solid $white;
   }
+
 }
